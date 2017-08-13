@@ -40,8 +40,8 @@ public class View extends javax.swing.JFrame {
         model.addColumn("Total");
         tblResult.setModel(model);  //Agregamos al objeto tabla las columnas
         
-        Set keys = table.keySet();  //Obtenemos los key del map y los guardamos
-        Iterator it = keys.iterator();  //Obtenemos una colección
+        Set keys = table.keySet();  //Obtenemos los key del map y los guardamos con Set para que no hallan repetidos
+        Iterator it = keys.iterator();  //Iteramos sobre la colección
         while(it.hasNext()){        //Recorremos la colección
             String key = (String) it.next();    //Convertimos el key del map a un string
             model.insertRow(0, new Object[]{key, table.get(key)});  //Establecemos los valores de las filas en la tabla
